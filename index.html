@@ -1,278 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Example</title>
+<html>
+<head>
+	<title>Hijraa</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<style type="text/css">
+		main{
+			margin-top: 70px;
+		}
+		.box-news{
+			background-color: #42e8f4;
+			border-radius: 4px;
+			height: 289px;
+			padding-left: 20px;
+			padding-top: 230px;
+		}
+		.news{
+			margin-bottom: -32px;
+			margin-top: 8px;
+		}
+		.box-news-left{
+			background-color: #41f477;
+			border-radius: 4px;
+			height: 135px;
+			margin-bottom: 15px;
+			padding-top: 54px;
+			padding-left: 10px;
+		}
+		.box-poster{
+			background-color: #fc941e;
+			border-radius: 4px;
+			height: 170px;
+			margin-bottom: 15px;
+			text-align: center;
+			padding-top: 62px;
+		}
+		.rubik{
+			margin: 15px 0px;
+			padding: 10px 0px;
+		}
+		.rubik-title{
+			background-color: #f41630;
+			border-radius: 4px;
+			padding: 10px;
+			color: #fff;
+		}
+		.box-news-child{
+			background-color: #42e8f4;
+			border-radius: 4px;
+			height: 245px;
+			padding-left: 20px;
+			padding-top: 190px;
+		}
+		.panel.with-nav-tabs .panel-heading{
+		    padding: 5px 5px 0 5px;
+		}
+		.panel.with-nav-tabs .nav-tabs{
+			border-bottom: none;
+		}
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	</style>
+</head>
+<body>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-8">
+					<div class="row">
+						<div class="col-sm-12 col-md-8">
+							<div class="news"><b class="rubik-title">TERKINI</b></div>
+							<div class="box-news">								
+								<b>Judul Artikel</b>
+								<p>Date</p>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-4">
+							<div class="box-news-left">
+								<b>Judul Artikel</b>
+								<p>Date</p>
+							</div>
+							<div class="box-news-left">
+								<b>Judul Artikel</b>
+								<p>Date</p>
+							</div>
+						</div>
+					</div>
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+					<div class="rubik"><b class="rubik-title">IQRA</b></div>
 
-    <style type="text/css">
-        .navbar-default .navbar-nav > li > a{
-            color: #d10819;
-        }
-        .navbar-default .navbar-nav > li > a:hover{
-            color: #fff;
-            background-color:#d10819;
-        }
-        .navbar-brand img{
-            width: 14%;
-        }
-        .box-contents{
-            border: 1px #84020d solid;
-            border-radius: 4px;
-            margin-bottom: 15px;
-        }
-        .box-contents:hover{
-            box-shadow: 0 0 5px 5px #888;
-            -moz-box-shadow: 0 0 5px 5px #888;
-            -webkit-box-shadow: 0 0 5px 5px#888;
-        }
-        .box-description, .box-footer{
-            padding: 7px;
-        }
-        .btn-custom{
-            color: #d10819;
-            background-color:#fff;
-            border: 1px #d10819 solid;
-        }
-        .btn-custom:hover{
-            color: #fff;
-            background-color:#d10819;
-        }
-        .box-header{
-            text-transform: capitalize;
-            text-align: center;
-            color: #000;          
-        }
-        .span-one{
-            width: 117px;
-            height: 2px;
-            background: #1e2d3a;
-            display: inline-block;
-            margin-left: 5px;
-            box-shadow: 40px 9px 0px #777;
-            margin-bottom: 30px;  
-        }
-        .img-custom{
-            margin-bottom: 10px;
-        }
-        .img-custom:hover{
-            border-radius: 50%;
-            box-shadow: 0 0 2px 2px #888;
-            -moz-box-shadow: 0 0 2px 2px #888;
-            -webkit-box-shadow: 0 0 2px 2px#888;
-        }
-        footer{
-            clear: both;
-            height: 50px;
-            margin-top: 30px;
-            padding-top: 10px;
-            text-align: center;
-            background-color: #eee;
-        }
-    </style>
+					<div class="row">
+						<!-- <p class="rubik">IQRA</p> -->
+						<div class="col-sm-12 col-md-6">
+							<div class="box-news-left">
+								<b>Judul Artikel</b>
+								<p>Date</p>
+							</div>
+							<b>Judul Artikel</b>
+							<p>Date</p><hr>
+							<b>Judul Artikel</b>
+							<p>Date</p><hr>
+						</div>
+						<div class="col-sm-12 col-md-6">
+							<div class="box-news-left">
+								<b>Judul Artikel</b>
+								<p>Date</p>
+							</div>
+							<b>Judul Artikel</b>
+							<p>Date</p><hr>
+							<b>Judul Artikel</b>
+							<p>Date</p><hr>
+						</div>
+					</div>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html"><img class="img-responsive" src="vendor/css/HK1.png"></a>
-    </div>
+					<div class="rubik"><b class="rubik-title">STORY</b></div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="fakta.html">TANGGA FAKTA</a></li>
-        <li><a href="video.html">VIDEO & PICTURE</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<main>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="box-contents">
-                            <div class="box-content">
-                                <img class="img-responsive img-rounded" src="vendor/css/404.jpg">
-                            </div>
-                            <div class="box-description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.
-                            </div>
-                            <div class="box-footer">
-                                <button class="btn btn-custom">Selengkapnya</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="box-contents">
-                            <div class="box-content">
-                                <img class="img-responsive img-rounded" src="vendor/css/404.jpg">
-                            </div>
-                            <div class="box-description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.
-                            </div>
-                            <div class="box-footer">
-                                <button class="btn btn-custom">Selengkapnya</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="box-contents">
-                            <div class="box-content">
-                                <img class="img-responsive img-rounded" src="vendor/css/404.jpg">
-                            </div>
-                            <div class="box-description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.
-                            </div>
-                            <div class="box-footer">
-                                <button class="btn btn-custom">Selengkapnya</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="box-contents">
-                            <div class="box-content">
-                                <img class="img-responsive img-rounded" src="vendor/css/404.jpg">
-                            </div>
-                            <div class="box-description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.
-                            </div>
-                            <div class="box-footer">
-                                <button class="btn btn-custom">Selengkapnya</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="content">
-                    <h5>TANGGA HOAX</h5>
-                </div>
-                <div class="list-group">
-                  <a href="#" class="list-group-item disabled">
-                    Terbaru
-                  </a>
-                  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                  <a href="#" class="list-group-item">Morbi leo risus</a>
-                  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                  <a href="#" class="list-group-item">Vestibulum at eros</a>
-                </div><br>
-                <div class="list-group">
-                  <a href="#" class="list-group-item disabled">
-                    terberpengaruh
-                  </a>
-                  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                  <a href="#" class="list-group-item">Morbi leo risus</a>
-                  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                  <a href="#" class="list-group-item">Vestibulum at eros</a>
-                </div><br>
-                <div class="list-group">
-                  <a href="#" class="list-group-item disabled">
-                    paling dibaca
-                  </a>
-                  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                  <a href="#" class="list-group-item">Morbi leo risus</a>
-                  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                  <a href="#" class="list-group-item">Vestibulum at eros</a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="box-header">
-                    <h3>our partners</h3>
-                    <span class="span-one"></span>
-                </div>
-                <div class="row">
-                    <div class="col-md-2 col-sm-6">
-                        <img class="img-responsive img-rounded img-custom" src="vendor/css/404.jpg">
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <img class="img-responsive img-rounded img-custom" src="vendor/css/404.jpg">
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <img class="img-responsive img-rounded img-custom" src="vendor/css/404.jpg">
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <img class="img-responsive img-rounded img-custom" src="vendor/css/404.jpg">
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <img class="img-responsive img-rounded img-custom" src="vendor/css/404.jpg">
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <img class="img-responsive img-rounded img-custom" src="vendor/css/404.jpg">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2 col-sm-6">
-                        <img class="img-responsive img-rounded img-custom" src="vendor/css/404.jpg">
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <img class="img-responsive img-rounded img-custom" src="vendor/css/404.jpg">
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <img class="img-responsive img-rounded img-custom" src="vendor/css/404.jpg">
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <img class="img-responsive img-rounded img-custom" src="vendor/css/404.jpg">
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <img class="img-responsive img-rounded img-custom" src="vendor/css/404.jpg">
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <img class="img-responsive img-rounded img-custom" src="vendor/css/404.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-<footer>
-    &copy ALl Right 2018
-</footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
+					<div class="row">
+						<div class="col-sm-12 col-md-6">
+							<div class="box-news-child">								
+								<b>Judul Artikel</b>
+								<p>Date</p>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-6">
+							<div class="row">
+								<div class="col-sm-12 col-md-4">
+									<img src="https://assets.ubuntu.com/v1/c5cb0f8e-picto-ubuntu.svg" style="width: 100%;height: 60px;">
+								</div>
+								<div class="col-sm-12 col-md-8">
+									<b>Judul Artikel</b>
+									<p>Date</p><hr>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12 col-md-4">
+									<img src="https://assets.ubuntu.com/v1/c5cb0f8e-picto-ubuntu.svg" style="width: 100%;height: 60px;">
+								</div>
+								<div class="col-sm-12 col-md-8">
+									<b>Judul Artikel</b>
+									<p>Date</p><hr>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12 col-md-4">
+									<img src="https://assets.ubuntu.com/v1/c5cb0f8e-picto-ubuntu.svg" style="width: 100%;height: 60px;">
+								</div>
+								<div class="col-sm-12 col-md-8">
+									<b>Judul Artikel</b>
+									<p>Date</p><hr>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="rubik"><b class="rubik-title">KOMIK</b></div>
+
+					<div class="row">
+						<div class="col-sm-12 col-md-4">
+							<img src="https://cdn2.iconfinder.com/data/icons/ios-7-style-metro-ui-icons/512/MetroUI_Ubuntu.png" style="width: 100%;height: 150px;">
+							<b>Judul Komik</b>
+							<p>Date</p>
+						</div>
+						<div class="col-sm-12 col-md-4">
+							<img src="https://cdn2.iconfinder.com/data/icons/ios-7-style-metro-ui-icons/512/MetroUI_Ubuntu.png" style="width: 100%;height: 150px;">
+							<b>Judul Komik</b>
+							<p>Date</p>
+						</div>
+						<div class="col-sm-12 col-md-4">
+							<img src="https://cdn2.iconfinder.com/data/icons/ios-7-style-metro-ui-icons/512/MetroUI_Ubuntu.png" style="width: 100%;height: 150px;">
+							<b>Judul Komik</b>
+							<p>Date</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-4">
+					<div class="box-poster">
+						<b>Untuk poster</b>
+					</div>
+					<div class="box-poster">
+						<b>Untuk poster</b>
+					</div>
+					<div class="box-poster">
+						<b>Untuk poster</b>
+					</div>
+					<div class="box-poster">
+						<b>Untuk poster</b>
+					</div>
+
+					<div class="panel with-nav-tabs panel-primary">
+		                <div class="panel-heading">
+	                        <ul class="nav nav-tabs">
+	                            <li class="active" style="padding-right: 40px;">
+	                            	<a href="#tab1primary" data-toggle="tab">Primary 1</a>
+	                            </li>
+	                            <li>
+	                            	<a href="#tab2primary" data-toggle="tab">Primary 2</a>
+	                            </li>
+	                        </ul>
+		                </div>
+		                <div class="panel-body">
+		                    <div class="tab-content">
+		                        <div class="tab-pane fade in active" id="tab1primary">
+		                        	<b>Judul Artikel 1</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 1</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 1</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 1</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 1</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 1</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 1</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 1</b>
+									<p>Date</p><hr>
+		                        </div>
+		                        <div class="tab-pane fade" id="tab2primary">
+		                        	<b>Judul Artikel 2</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 2</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 2</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 2</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 2</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 2</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 2</b>
+									<p>Date</p><hr>
+									<b>Judul Artikel 2</b>
+									<p>Date</p><hr>
+								</div>
+		                    </div>
+		                </div>
+		            </div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
 </html>

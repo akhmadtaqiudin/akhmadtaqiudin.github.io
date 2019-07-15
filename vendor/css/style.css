@@ -1,10 +1,10 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    color: #333;
-    margin: 20px;
-    background-color: #26a69a;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+ 	line-height: 20px;
+ 	color: #333;
+ 	margin: 20px;
+ 	background-color: #26a69a;
 }
 tbody > tr:hover{
 	background-color: #eee;

@@ -38,14 +38,12 @@ h2{
 	border-bottom-right-radius: 27px;
 }
 .hr-header1{
-	background-color: aqua;
 	margin-top: 23px;
-	border-top: 3px solid #eee;
+	border-top: 3px solid aqua;
 }
 .hr-header2{
-	background-color: aqua;
 	margin-top: 23px;
-	border-top: 3px solid #eee;
+	border-top: 3px solid aqua;
 }
 .hr-footer1{
 	width: 10%;

@@ -1,0 +1,133 @@
+public function hit_api($data,$url){
+	    $post_fields = $data;
+
+	    $headers = array(
+	      "Content-type: application/json",
+	      "Content-length: " . strlen($post_fields)
+	    );
+
+	    $ch = curl_init(); 
+	    curl_setopt($ch, CURLOPT_URL,$url);
+	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	    curl_setopt($ch, CURLOPT_POST, true);
+	    curl_setopt($ch, CURLOPT_POSTFIELDS, $post_fields);
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+	    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+	    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+	    curl_setopt($ch, CURLOPT_VERBOSE, TRUE);
+	    curl_setopt($ch, CURLOPT_TIMEOUT, 200);
+
+	    $output = curl_exec($ch); 
+	    curl_close($ch);
+
+	    $rest = json_decode($output, true);
+	    return $rest;
+	}
+
+	public function hit_data1(){ 
+		$this->load->library('session');
+	    date_default_timezone_set('Asia/Jakarta');
+	    $fp = fopen(FCPATH.'path/nama_file'.date('Y-m-d').'.txt','a+');
+	    fprintf($fp, date('Y-m-d H:i:s'));
+
+	    $post_data['data1'] = $data1;
+	    $post_data['data2'] = $this->session->userdata('data2');
+	    $post_data['data3'] = $this->session->userdata('data3');
+
+	    $pos = json_encode($post_data);
+	    $a = str_replace('TOTAL_TRX_AMOUNT":"', 'TOTAL_TRX_AMOUNT":', $pos);
+	    $b = str_replace('.00"', '.00', $a);
+
+	    fwrite($fp, "[......]\n".$b."\n");
+	    fwrite($fp, "[.......]".$url."\n");
+
+	    $output = $this->hit_api($b,$url);
+	    fprintf($fp, date('Y-m-d H:i:s'));
+	    fwrite($fp, "[.......]\n".json_encode($output)."\n");
+	    fprintf($fp, "\n====================================================================\n\n");
+	    fclose($fp);
+
+	    $st = $output['param_response'];
+
+	    if($st == '00001'){
+	    	$this->session->set_userdata('data1', strval($data1));
+	    	$this->session->set_userdata('data2', $data2);
+	    	$this->session->set_userdata('data3', $data3);
+
+		    $detail['data1'] = $output['data1'];
+		    foreach ($detail as $value) {
+			    if(empty($value) || !isset($value['data1'])){
+		    		$data['data1'] = '';
+		    	}else{
+		    		$data['data1'] = $value['data1'];
+		    	}
+
+		    	if(empty($value) || !isset($value['data2'])){
+		    		$data['data2'] = '';
+		    	}else{
+		    		$data['data2'] = $value['data2'];
+		    	}  	
+		    }	    
+		    
+		    $this->load->view('index',$data);
+	    }else{
+		    $data['status_code'] = $output['param_code'];
+		    $data['status_desc'] = $output['param_desc'];
+		    $this->load->view('othersresponse',$data);
+	    }	
+	}
+
+	public function hit_data2(){ 
+		$this->load->library('session');
+	    date_default_timezone_set('Asia/Jakarta');
+	    $fp = fopen(FCPATH.'path/nama_file'.date('Y-m-d').'.txt','a+');
+	    fprintf($fp, date('Y-m-d H:i:s'));
+
+	    $post_data['data1'] = $data1;
+	    $post_data['data2'] = $this->session->userdata('data2');
+	    $post_data['data3'] = $this->session->userdata('data3');
+
+	    $pos = json_encode($post_data);
+	    $a = str_replace('TOTAL_TRX_AMOUNT":"', 'TOTAL_TRX_AMOUNT":', $pos);
+	    $b = str_replace('.00"', '.00', $a);
+
+	    fwrite($fp, "[......]\n".$b."\n");
+	    fwrite($fp, "[.......]".$url."\n");
+
+	    $output = $this->hit_api($b,$url);
+	    fprintf($fp, date('Y-m-d H:i:s'));
+	    fwrite($fp, "[.......]\n".json_encode($output)."\n");
+	    fprintf($fp, "\n====================================================================\n\n");
+	    fclose($fp);
+
+	    $st = $output['param_response'];
+
+	    if($st == '00001'){
+		    $detail['data1'] = $output['data1'];
+		    foreach ($detail as $value) {
+			    if(empty($value) || !isset($value['data1'])){
+		    		$data['data1'] = '';
+		    	}else{
+		    		$data['data1'] = $value['data1'];
+		    	}
+
+		    	if(empty($value) || !isset($value['data2'])){
+		    		$data['data2'] = '';
+		    	}else{
+		    		$data['data2'] = $value['data2'];
+		    	}  	
+		    }	  	        
+
+	    	$this->session->set_userdata('data1', $data['data1']);
+	    	$this->session->set_userdata('data2', $data['data2']);
+	    	$this->session->set_userdata('data3', $data['data3']);
+
+		    $data['tanggal'] = date('d/m/Y');
+		    $this->load->view('index',$data);
+	    }else{
+		    $data['status_code'] = $output['param_code'];
+		    $data['status_desc'] = $output['param_desc'];
+		    $this->load->view('othersresponse',$data);
+	    }	
+	}

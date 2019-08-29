@@ -33,6 +33,7 @@ h2{
 }
 .main-footer{
 	height: 32px;
+	margin-bottom: 71px;
 	background-color: #fff;
 	border-bottom-left-radius: 27px;
 	border-bottom-right-radius: 27px;
@@ -81,17 +82,17 @@ h2{
 }
 .elipse{
     	background-color: #dcdede;
-	color: black;
+	color: #fff;
 	height: 160px;
 	padding: 16px 5px;
 	text-align: center;
 	border-radius: 80px 80px 7px 7px;
 	margin-bottom: 23px;
-	box-shadow: 0 0 7px 2px #888;
+	box-shadow: 0 0 7px 2px #fff;
 }
 .elipse:hover{
     	background-color: #26a69a;
-    	color: #fff;
+    	color: aqua;
     	transition-duration: .7s, .7s;
 	transition-timing-function: ease, ease-out;
 	transition-delay: 0s, .7s;

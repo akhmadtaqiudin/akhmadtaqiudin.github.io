@@ -79,3 +79,29 @@ h2{
 	margin-left: -8%;
 	margin-top: 8px;
 }
+.elipse{
+    	background-color: #dcdede;
+	color: black;
+	height: 160px;
+	padding: 16px 5px;
+	text-align: center;
+	border-radius: 80px 80px 7px 7px;
+	margin-bottom: 23px;
+	box-shadow: 0 0 7px 2px #888;
+}
+.elipse:hover{
+    	background-color: #26a69a;
+    	color: #fff;
+    	transition-duration: .7s, .7s;
+	transition-timing-function: ease, ease-out;
+	transition-delay: 0s, .7s;
+	transition-property: background-color;
+}
+.hr-footer3{
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+.b-a{
+	font-size: 19px;
+	margin-bottom: -19px;
+}
